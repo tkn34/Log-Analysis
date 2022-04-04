@@ -3,7 +3,7 @@ Log Analysis for AI
 
 * **`実行方法`**
   1. jupyterNotebookを起動する。
-  2. train.ipynbを開く。
+  2. exec.ipynbを開く。
 
 * **`実行内容`**
   1. データ取得(公開データセット「BGL」を取得する。)
