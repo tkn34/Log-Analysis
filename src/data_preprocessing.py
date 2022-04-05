@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 31 19:08:07 2022
 
-@author: 81901
-"""
 from tqdm import tqdm
 import numpy as np
 import pandas as pd
@@ -26,10 +21,13 @@ class FeatureExtraction:
         # Crete Vector
         self.vector = self._create_vector()
         #print("Crete Vector    : Done")
+        #print("Create Feature  : Done")
         # Create Feature
         self.feature, self.ixf_dict = self._create_feature()
         self._save_feature()
-        #print("Create Feature  : Done")
+        # ラベル付与
+        
+        
         return self.feature, self.vocabulary
         
     def _create_vocab(self):
@@ -66,10 +64,8 @@ class FeatureExtraction:
 
     def _create_feature(self):
         if self.fe_type == "tfilf":
-            print("tfilf")
             feature, ilf_dict = self._create_feature_tf_ilf()
         else:
-            print("tfidf")
             feature, ilf_dict = self._create_feature_tf_idf()
         return feature, ilf_dict
 
@@ -96,6 +92,7 @@ class FeatureExtraction:
         tfinvf = np.array(tfinvf)
         feature_vectors.append(tfinvf)
         feature = np.hstack(feature_vectors)
+        feature = pd.DataFrame(feature)
         return feature, ilf_dict
 
     def _create_feature_tf_idf(self):
@@ -121,6 +118,7 @@ class FeatureExtraction:
         tfinvf = np.array(tfinvf)
         feature_vectors.append(tfinvf)
         feature = np.hstack(feature_vectors)
+        feature = pd.DataFrame(feature)
         return feature, idf_dict
 
     def _save_feature(self):
