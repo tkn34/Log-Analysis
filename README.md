@@ -18,10 +18,10 @@ Log Analysis for AI
     9. ログの可視化(異常と判定したログを赤で表示)
 
 
-**`Log-Analysis(cosin_s.ipynb)`**
+**`Log-Analysis(cosin_similarity.ipynb)`**
   * **`実行方法`**
     1. jupyterNotebookを起動する。
-    2. cosin_s.ipynbを開く。
+    2. cosin_similarity.ipynbを開く。
 
   * **`実行内容`**
     1. データ取得(公開データセット「BGL」を取得する。)
