@@ -4,7 +4,7 @@ Log Analysis for AI
 **`Log-Analysis(Demo(cosine similarity + LightGBM).ipynb)`**
   * **`実行方法`**
     1. jupyterNotebookを起動する。
-    2. exec.ipynbを開く。
+    2. Demo(cosine similarity + LightGBM).ipynbを開く。
 
   * **`実行内容`**
     1. データ取得(公開データセット「BGL」を取得する。)
